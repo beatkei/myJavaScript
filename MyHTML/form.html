@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>フォーム</title>
+    </head>
+    <body>
+        <input type="text">
+        <input type="text" placeholder="入力例">
+        <input type="text" value="デフォルト値">
+        <input type="password">
+        <textarea></textarea>
+        <textarea>デフォルト値</textarea>
+        <hr>
+        <label for="name">名前１</label>
+        <input type="text" id="name">
+
+        <!--label属性の中にinputいれてしまえば、forとidの紐付けは扶養-->
+        <label>名前２<input type="text"></label>
+        <hr>
+
+        <label for="color">好きな色</label>
+        <select id="color">
+            <option>色１</option>
+            <option>色２</option>
+            <option selected>色３</option>
+            <option>色４</option>
+        </select>
+        <hr>
+
+        <fieldset>
+            <legend>チェックボックスのタイトル</legend>
+            <label><input type="checkbox"> iPhone</label>
+            <label><input type="checkbox" checked> Andoroid</label>
+            <label><input type="checkbox"> その他</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>ラジオボタンのタイトル</legend>
+            <!--nameに同じものをつけることにより１つだけの選択になる-->
+            <label><input type="radio" name="phone"> iPhone</label>
+            <label><input type="radio" name="phone" checked> Andoroid</label>
+            <label><input type="radio" name="phone"> その他</label>
+        </fieldset>
+
+        <p><input type="color"></p>
+        <p><input type="date"></p>
+        <p><input type="number"></p>
+        <p><input type="range"></p>
+
+        <input type="button" value="OK">
+        <!--ボタンタグのほうが画像指定できたりして柔軟-->
+        <button>OK</button>
+        <button disabled>OK</button>
+
+        <!--nameは送信用、idはタグ指定用、classはCSS用-->
+        <form action="process.php" method="post">
+            <label>担当者名<input type="text" name="username"></label>
+            <label>タスク<input type="text" name="task"></label>
+            <button>追加</button>
+        </form>
+    </body>
+</html>

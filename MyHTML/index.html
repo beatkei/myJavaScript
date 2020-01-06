@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>タイトル</title>
+        <meta name="description" content="検索エンジンが使う説明">
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <h1>ヘッダーだよ</h1>
+        </header>
+        <!--タグはデザインではなく、段落等の文章の意味を表すために使う-->
+        <p>段落</p>
+        <img src="img/beat_ver2005_01_big%20.jpg" width="350" alt="画像の説明">
+        <h2>テストリンク<a href="https://dotinstall.com" target="_blank">（他サイト）</a></h2>
+        <h2>テストリンク<a href="members.html">（ローカルhtml）</a></h2>
+        <h2>テストリンク<a href="lessons/index.html">（サブフォルダhtml）</a></h2>
+        <h2>テストリンク<a href="#about">（アンカー）</a></h2>
+        <p>段落<strong>強調</strong></p>
+        <blockquote cite="http://wwww.beatkei.com">
+            <p>引用した文章</p>
+        </blockquote>
+        <hr>
+        <nav>
+            <p>改行<br>文字実態参照<br>
+                <!--文字実態参照（エスケープ的なやつ）-->
+                &lt;br&gt;
+            </p>
+        </nav>
+
+        <pre>
+            <p>
+            preタグで
+            レイアウト通りに
+            表示
+            </p>
+        </pre>
+
+        <!--箇条書きリスト-->
+        <ul>
+            <li id="about">１個目</li>
+            <li>２個目</li>
+        </ul>
+
+        <!--順序付きリスト-->
+        <ol>
+            <li>１個目</li>
+            <li>２個目</li>
+        </ol>
+
+        <!--説明リスト-->
+        <dl>
+            <dt>１個目</dt>
+            <dd>説明１</dd>
+            <dt>２個目</dt>
+            <dd>説明２</dd>
+        </dl>
+
+        <!--表-->
+        <table>
+            <thead>
+                <tr>
+                    <th>見出し１</th>
+                    <th>見出し２</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>中身１</td>
+                    <td>中身２</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--asideタグは本文にあまり関係ない広告などを表す-->
+        <aside>
+            <!--divタグはスタリングのために利用するタグ-->
+            <div style="background: aquamarine;">
+                <!--spanタグは文章の一部だけにスタイリングを適用したいときに利用-->
+                <h2><span style="color: red">広</span>告です</h2>
+            </div>
+        </aside>
+
+        <footer>
+            <p><a href="#top">もどる</a></p>
+        </footer>
+
+    </body>
+</html>

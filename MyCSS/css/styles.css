@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/*bodyを指定すれてば子要素に継承される*/
+body {
+    color: red;
+    /*継承されないものもある（継承されるかはmdnで調べられる）*/
+    border: 1px solid pink;
+    font-weight: bold;
+}
+
+h2 {
+    color: skyblue;
+    font-size: 48px;
+    line-height: 72px;
+    background-color: pink;
+    text-align: center;
+    text-decoration: line-through;
+}
+
+a {
+    text-decoration: none;
+    /*インストールされているフォントしか利用できないので何個も書いておける*/
+    /*空白を含むフォント名はコーテーションで囲む*/
+    /*日本語のフォントを利用するのであれば先頭でcharsetを宣言する*/
+    /*最後のsans-serifはゴシック体のグループという指定で*/
+    /*全フォントがなかったらこのグループのものが利用されるので必ず書いておく*/
+    font-family: Verdana, 'Arial Black', メイリオ, sans-serif;
+}
+
+img {
+    /*画像が文字のベースラインにそろう*/
+    vertical-align: middle;
+}
+
+ul {
+    /*白まる*/
+    list-style-type: circle;
+    /*画像指定*/
+    list-style-image: url("../img/icon.png");
+}
+
+ol {
+    /*abc*/
+    list-style-type: lower-alpha;
+}
+
+/*class指定したやつの指定のしかた*/
+.info {
+    color: skyblue;
+}
+
+.box1 {
+    background-color: orange;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+    /*左右のマージンをautoで指定することにより中央揃いになる*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box2 {
+    background-color: skyblue;
+    width: 50%;
+    height: 50%;
+    /*box内であふれた文字を表示しない*/
+    overflow: hidden;
+    border-width: 2px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.box3 {
+    background-color: tomato;
+    /*divタグはblock displayなので縦に並ぶがinline-block指定することで横に並ぶ*/
+    width: 100px;
+    height: 40px;
+    display: inline-block;
+}
+
+.box4 {
+    background-color: yellow;
+    /*position指定で他はずらさずに位置を調整できる/*/
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+
+.box5 {
+    background-color: orange;
+    width: 100px;
+    height: 100px;
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /*重なり順を指定*/
+    z-index: 3;
+
+}
+
+.box6 {
+    background-color: skyblue;
+    width: 100px;
+    height: 100px;
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    /*重なり順を指定*/
+    z-index: 2;
+}
+
+.box7 {
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /*重なり順を指定*/
+    z-index: 1;
+}
+
+
+/*ブラウザの幅でboxのサイズがかわるようにする*/
+
+.box8 {
+    background-color: orange;
+    /*ブラウザの幅でboxのサイズがかわるようにする*/
+    width: calc((100% - 40px) / 3 );
+    height: 100px;
+    margin-right: auto;
+    /*影をつける*/
+    box-shadow: 5px 5px black;
+    text-shadow: 5px 5px black;
+}
+
+.box9 {
+    background-color: skyblue;
+    /*ブラウザの幅でboxのサイズがかわるようにする*/
+    width: calc((100% - 40px) / 3 );
+    height: 100px;
+    margin: auto;
+    /*3つ目の要素をしていすることでぼかせる*/
+    box-shadow: 5px 5px 3px black;
+    text-shadow: 5px 5px 3px black;
+}
+
+.box10 {
+    background-color: tomato;
+    /*ブラウザの幅でboxのサイズがかわるようにする*/
+    width: calc((100% - 40px) / 3 );
+    height: 100px;
+    margin-left: auto;
+}
+
+header {
+    height: 100px;
+    background-color: pink;
+    background-image: url(../img/header.png);
+    /*画像のサイズを合わせて真ん中にする*/
+    background-size: cover;
+    background-position: center;
+}

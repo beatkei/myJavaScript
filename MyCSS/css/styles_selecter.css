@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/*属性セレクター*/
+h1 {
+    color: skyblue;
+}
+
+/*classセレクタ：複数指定とかできるのでいろいろと便利*/
+.info {
+    color: red;
+}
+
+.title {
+    font-weight: normal;
+}
+
+/*idセレクター：html内で同じidは複数使えない*/
+#info2 {
+    color: green;
+}
+
+
+/*属性セレクター：*/
+[target] {
+    font-weight: bold;
+}
+/*属性セレクターは値を指定することもできる(部分一致も可能)*/
+[href="#top"] {
+    color: red;
+    font-weight: bold;
+}
+
+/* 全称セレクター：全てに適用される*/
+/** {*/
+/*    font-size: 18px;*/
+/*}*/
+
+/*擬似要素：特定の要素の前に文字とかを挿入できる*/
+h2::before {
+    content: "- ";
+}
+
+h2:after {
+    content: " -";
+}
+
+.btn {
+    width: 100px;
+    background: skyblue;
+    text-align: center;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+/*状態に応じた擬似クラス*/
+.btn:hover {
+    opacity: 0.8;
+}
