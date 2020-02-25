@@ -23,4 +23,24 @@
     // map
     const updateScores = scores2.map(score => score + 20 );
     console.log(updateScores);
+
+    // filter
+    const numbers = [1, 4, 7, 8, 10];
+
+    const evenNumbers = numbers.filter((number) => {
+        if ( number %2 === 0) {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    console.log(evenNumbers);
+
+    // オブジェクト(構成要素のことをプロパティorメンバーと呼ぶ)
+    const point = {x: 100, y: 180};
+    console.log(point);
+
+    point.z = 200;
+    delete point.y;
+    console.log(point);
 }
