@@ -43,4 +43,48 @@
     point.z = 200;
     delete point.y;
     console.log(point);
+
+    // 例外処理
+    //const name = 'beat';
+    const name = 5;
+
+    try {
+        console.log(name.toUpperCase());
+    } catch (e) {
+        console.log(e);
+    }
+    console.log('Finish!');
+
+    // クラス
+    class Post {
+        constructor(text) {
+            this.text= text;
+            this.linkcount= 0;
+        }
+
+        show() {
+            console.log(`${this.text} - ${this.linkcount}いいね`)
+        }
+
+        like() {
+            this.linkcount++;
+            this.show();
+        }
+
+        // 静的メソッド （thisはつかえないよ）
+        static showInfo() {
+            console.log('Post Class Versiton 1.0')
+        }
+    }
+
+    const posts = [
+        new Post('JaaScript勉強中'),
+        new Post('プログラミング楽しい'),
+    ]
+
+    posts[0].show();
+    posts[1].show();
+    posts[0].like();
+
+    Post.showInfo();
 }
